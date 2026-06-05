@@ -1,0 +1,121 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.title {
+    color: #515076;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 78px;
+    margin-top: 220px;
+    margin-left: 217px;
+    margin-right: 217px;
+    margin-bottom: 110px;
+    text-align: center;
+}
+
+.product-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.product-image {
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 30px;
+}
+
+.skin-type {
+    color: #515076;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+
+.product-name {
+    color: #515076;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+
+
+.description {
+    color: #515076;
+    font-size: 13px;
+    line-height: 18px;
+    width: 291px;
+    height: 36px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+}
+
+.compound-label {
+    color: #515076;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+
+.compound-item {
+    color: #515076;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+
+.last-compound-item {
+    color: #515076;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    margin-left: 0px;
+}
+
+
+.price-label {
+    color: #515076;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+
+
+.price-amount {
+    color: #515076;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 161px;
+}
+
+
+.card-background {
+    background-color: #F7F7FA;
+    height: 573px;
+    width: 340px;
+    margin-top: 110px;
+    margin-left: 85px;
+    margin-right: 45px;
+    margin-bottom: 45px;
+}
