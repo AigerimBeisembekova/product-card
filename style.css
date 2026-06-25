@@ -1,6 +1,19 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
+    width: 100%;
+    background-image: url('images/bg 1.jpg');
+    background-repeat: no-repeat;
+    background-position: top left 700px;
+    background-size: width 790px height 697px;
+    margin: 0;
+    padding: 0;
 }
 
 .title {
@@ -17,8 +30,13 @@ body {
 
 .product-list {
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+    width: 1110px;
 }
 
 .product-image {
@@ -88,34 +106,32 @@ body {
 }
 
 
-.price-label {
+.product-price {
     color: #515076;
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
-    margin-top: 25px;
     margin-bottom: 25px;
-    margin-left: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
-
-.price-amount {
-    color: #515076;
-    font-size: 20px;
-    line-height: 24px;
+.product-price span {
     font-weight: 400;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 161px;
 }
+
 
 
 .card-background {
     background-color: #F7F7FA;
-    height: 573px;
     width: 340px;
-    margin-top: 110px;
-    margin-left: 85px;
-    margin-right: 45px;
-    margin-bottom: 45px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    gap: 45px;
 }
+
