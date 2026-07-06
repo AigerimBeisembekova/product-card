@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    width: 100%;
+    background-image: url('images/bg 1.jpg');
+    background-repeat: no-repeat;
+    background-position: top left 700px;
+    background-size: width 790px height 697px;
+    margin: 0;
+    padding: 0;
+}
+
