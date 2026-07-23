@@ -228,7 +228,6 @@ body {
 }
 
 
-/* Изначально кнопка зелёная */
 .color-toggle-btn {
   background-color: #2e7d32;
   color: #ffffff;
@@ -238,7 +237,6 @@ body {
   cursor: pointer;
 }
 
-/* Фиолетовое состояние (добавляется через toggle) */
 .color-toggle-btn.purple-state {
   background-color: #7b1fa2 !important;
 }

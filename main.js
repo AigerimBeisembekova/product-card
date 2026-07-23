@@ -33,8 +33,6 @@ function openGoogleInNewTab() {
 
     if (newTab === true) {
         window.open('https://www.google.com');
-    } else {
-        return; // Пользователь отменил действие
     }
 }
 
