@@ -1,6 +1,3 @@
-
-// 2. Перекрашивание ПЕРВОЙ карточки
-
 const firstCard = document.querySelector('.products__item');
 const changeFirstCardBtn = document.querySelector('#change-first-card-btn');
 
@@ -8,8 +5,6 @@ changeFirstCardBtn.addEventListener('click', () => {
     firstCard.style.backgroundColor = '#e8f5e9'; // Легкий зеленый
 });
 
-
-// 3. Перекрашивание ВСЕХ карточек
 
 const allCards = document.querySelectorAll('.products__item');
 const changeAllCardsBtn = document.querySelector('#change-all-cards-btn');
@@ -21,8 +16,6 @@ changeAllCardsBtn.addEventListener('click', () => {
     });
 });
 
-
-// 4. Открытие Google при нажатии на кнопку
 
 const openGoogleBtn = document.querySelector('#open-google-btn');
 
@@ -37,8 +30,6 @@ function openGoogleInNewTab() {
 }
 
 
-// 5. Вывод в console.log и alert
-
 const showAlertBtn = document.querySelector('#show-alert-btn');
 
 showAlertBtn.addEventListener('click', function() {
@@ -51,9 +42,6 @@ function logAndAlert(message) {
 }
 
 
-
-// 6. Вывод заголовка при наведении (mouseover)
-
 const mainTitle = document.querySelector('.title.catalog__title');
 
 mainTitle.addEventListener('mouseover', function() {
@@ -64,9 +52,6 @@ function logElementText(element) {
     console.log(element.textContent.trim());
 }
 
-
-
-// 7. Переключение цвета кнопки через classList.toggle
 
 const toggleColorBtn = document.querySelector('#toggle-color-btn');
 
