@@ -45,7 +45,7 @@ mainTitle.addEventListener("mouseover", function () {
 });
 
 function logElementText(element) {
-  console.log(element.textContent.trim());
+  // console.log(element.textContent.trim());
 }
 
 const toggleColorBtn = document.querySelector("#toggle-color-btn");
