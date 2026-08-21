@@ -1,0 +1,60 @@
+export const products = [
+{
+imageUrl: "images/photo-1.jpg",
+category: "для нормальной кожи",
+name: "Увлажняющий мусс",
+description: "Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.",
+compound: ["активные ингредиенты","витамины С, А, РР, В И Е","солнцезащитные компоненты"],
+price: 2750
+},
+{
+imageUrl: "images/photo-2.jpg",
+name: "Увлажняющая маска",
+category: "для нормальной кожи",
+description: "Способствует удерживанию влаги в верхних слоях кожи.",
+compound: ["воски","минералы","масла"],
+price: 3500
+},
+{
+imageUrl: "images/photo-3.jpg",
+name: "Гель для умывания",
+category: "для нормальной кожи",
+description: "Интенсивно очищает, не повреждает защитный барьер кожи.",
+compound: ["минералы","витамины С, А, РР, В И Е","солнцезащитные компоненты"],
+price: 1650
+},
+{
+imageUrl: "images/photo-4.jpg",
+name: "Подарочный набор №1",
+category: "для нормальной кожи",
+description: "Набор, состоящий из увлажняющего крема и маски.",
+compound: ["воски","минералы","масла"],
+price: 4750
+},
+{
+imageUrl: "images/photo-5.jpg",
+name: "Подарочный набор №5",
+category: "для нормальной кожи",
+description: "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.",
+compound: ["воски","минералы","масла"],
+price: 7520
+}
+];
+
+
+const productsTemplate = document.querySelector("#products-template").content;
+const productsContainer = document.querySelector("#products-list");
+
+products.forEach((product) => {
+    const productClone = productsTemplate.cloneNode(true);
+    productClone.querySelector(".product-image").src = product.imageUrl;
+    productClone.querySelector(".product-name").textContent = product.name;
+    productClone.querySelector(".product-category").textContent = product.category;
+    productClone.querySelector(".product-description").textContent = product.description;
+    productClone.querySelector(".product-compound").innerHTML = ` ${product.compound.map((item) => `<li>${item}</li>`).join('')}`;
+    productClone.querySelector(".product-price").textContent = `${product.price} ₽`;
+
+    productsContainer.appendChild(productClone);
+});
+
+export default products;
