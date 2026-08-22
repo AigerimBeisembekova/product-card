@@ -41,20 +41,3 @@ price: 7520
 }
 ];
 
-
-const productsTemplate = document.querySelector("#products-template").content;
-const productsContainer = document.querySelector("#products-list");
-
-products.forEach((product) => {
-    const productClone = productsTemplate.cloneNode(true);
-    productClone.querySelector(".product-image").src = product.imageUrl;
-    productClone.querySelector(".product-name").textContent = product.name;
-    productClone.querySelector(".product-category").textContent = product.category;
-    productClone.querySelector(".product-description").textContent = product.description;
-    productClone.querySelector(".product-compound").innerHTML = ` ${product.compound.map((item) => `<li>${item}</li>`).join('')}`;
-    productClone.querySelector(".product-price").textContent = `${product.price} ₽`;
-
-    productsContainer.appendChild(productClone);
-});
-
-export default products;

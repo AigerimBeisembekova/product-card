@@ -1,13 +1,6 @@
-import products from './products.js';
-
-const compoundList = productClone.querySelector(".product-compound");
-
-compoundList.innerHTML = product.compound
-  .map(item => `<li>${item}</li>`)
-  .join('');
+import {products} from './products.js';
 
 
-  
 const productDescriptions = products.reduce((acc, product) => {
   acc[product.name] = product.description;
   return acc;
@@ -28,7 +21,10 @@ function renderProducts(itemsToRender) {
     productClone.querySelector(".product-name").textContent = product.name;
     productClone.querySelector(".product-category").textContent = product.category;
     productClone.querySelector(".product-description").textContent = product.description;
-    productClone.querySelector(".product-compound").textContent = ` ${product.compound.join(', ')}`;
+    const compoundList = productClone.querySelector(".product-compound");
+    compoundList.innerHTML = product.compound
+        .map(item => `<li>${item}</li>`)
+        .join('');
     productClone.querySelector(".product-price").textContent = `${product.price.toLocaleString('ru-RU')} ₽`;
 
     productsContainer.appendChild(productClone);
