@@ -32,19 +32,19 @@ const simpleComments = comments.map((comment) => ({ name: comment.name, email: c
 
 
 const invalidComments = comments.map(comment => ({ ...comment, isInvalid: comment.body.length > 180 ? true : false }));
-console.log(invalidComments);
+// console.log(invalidComments);
 
 
 const emailsReduce = comments.reduce((acc, comment) => {
   acc.push(comment.email);
     return acc;
 }, []);
-console.log(emailsReduce);
+// console.log(emailsReduce);
 
 const emailsMap = comments.map(comment => comment.email);
-console.log(emailsMap);
+// console.log(emailsMap);
 
 
 const emailsToString = emailsMap.join(', ');
-console.log(emailsToString);
+// console.log(emailsToString);
 

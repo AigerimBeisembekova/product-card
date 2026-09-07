@@ -6,12 +6,14 @@ const productDescriptions = products.reduce((acc, product) => {
   return acc;
 }, {});
 
+// console.log(productDescriptions);
+
 
 function renderProducts(itemsToRender) {
   const productsTemplate = document.querySelector("#products-template").content;
   const productsContainer = document.querySelector("#products-list");
   
-  productsContainer.innerHTML = '';
+
 
   itemsToRender.forEach((product) => {
     const productClone = productsTemplate.cloneNode(true);
