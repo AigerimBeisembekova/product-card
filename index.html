@@ -78,8 +78,9 @@
                 <h2 class="footer__social-title">Product Cards</h2>
                 <p class="footer__text">У нас самые лучшие продукты для кожи!</p>
                 <div class="footer__social-icons">
-                  <a href="#"><img src="images/telegram-icon.png"></a>
-                  <a href="#"><img src="images/vk-icon.png"></a>
+                  <a href="#"><img 
+                    src="images/telegram-icon.png" alt="телеграм"></a>
+                  <a href="#"><img src="images/vk-icon.png" alt="вКонтакте"></a>
                 </div>
               </div>
 
@@ -137,9 +138,9 @@
               <label for="userDateOfBirth">Дата рождения:</label>
               <input type="date" id="userDateOfBirth" name="userDateOfBirth" placeholder="Выберите дату рождения" required />
               <label for="userLogin">Email:</label>
-              <input type="email" id="userLogin" name="userLogin" placeholder="Введите логин" required />
+              <input type="email" id="userLogin" name="userLogin" placeholder="Введите логин" minlength="5" required />
               <label for="userPassword">Пароль:</label>
-              <input type="password" id="userPassword" name="userPassword" placeholder="Введите пароль" required />
+              <input type="password" id="userPassword" name="userPassword" placeholder="Введите пароль" minlength="5" required />
               <label for="userConfirmPassword">Подтвердите пароль:</label>
               <input type="password" id="userConfirmPassword" name="userConfirmPassword" placeholder="Подтвердите пароль" required />
               <button type="submit">Зарегистрироваться</button>

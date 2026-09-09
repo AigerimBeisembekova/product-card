@@ -1,50 +1,63 @@
-const subscribeForm = document.querySelector('.footer__subscribe-form');
+const subscribeForm = document.querySelector(".footer__subscribe-form");
 
-subscribeForm.addEventListener('submit', (event) => {
-  event.preventDefault()
-  const emailInput = subscribeForm.querySelector('input')
-  const userEmail = emailInput.value
-  console.log({ email: userEmail })
-  emailInput.value = ''
+subscribeForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const emailInput = subscribeForm.querySelector("input");
+  const userEmail = emailInput.value.trim();
+  console.log({ email: userEmail });
+  emailInput.value = "";
+  subscribeForm.reset();
 });
 
-
-const openModalBtn = document.getElementById('open-modal-btn');
-const closeModalBtn = document.querySelector('.modal__close-btn');
-const overlay = document.getElementById('overlay');
-const modal = document.getElementById('modal');
-
+const openModalBtn = document.getElementById("open-modal-btn");
+const closeModalBtn = document.querySelector(".modal__close-btn");
+const overlay = document.getElementById("overlay");
+const modal = document.getElementById("modal");
 
 function openModal() {
-    modal.classList.add('modal-showed');
-    overlay.classList.add('modal-showed');
+  modal.classList.add("modal-showed");
+  overlay.classList.add("modal-showed");
 }
 
 function closeModal() {
-    modal.classList.remove('modal-showed');
-    overlay.classList.remove('modal-showed');
+  modal.classList.remove("modal-showed");
+  overlay.classList.remove("modal-showed");
 }
 
-openModalBtn.addEventListener('click', openModal);
-closeModalBtn.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
+openModalBtn.addEventListener("click", openModal);
+closeModalBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
 
-const registrationForm = document.querySelector('.modal__form');
+const registrationForm = document.querySelector(".modal__form");
 
-registrationForm.addEventListener('submit', (event) => {
+registrationForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   if (!registrationForm.checkValidity()) {
-    alert('Registration rejected: Please fill out all required fields correctly.');
+    alert(
+      "Registration rejected: Please fill out all required fields correctly.",
+    );
     return;
   }
 
-  const userNameInput = registrationForm.querySelector('input[name="username"]');
-  const userSurnameInput = registrationForm.querySelector('input[name="userSurname"]');
-  const userDateOfBirthInput = registrationForm.querySelector('input[name="userDateOfBirth"]');
-  const userLoginInput = registrationForm.querySelector('input[name="userLogin"]');
-  const userPasswordInput = registrationForm.querySelector('input[name="userPassword"]');
-  const userConfirmPasswordInput = registrationForm.querySelector('input[name="userConfirmPassword"]');
+  const userNameInput = registrationForm.querySelector(
+    'input[name="username"]',
+  );
+  const userSurnameInput = registrationForm.querySelector(
+    'input[name="userSurname"]',
+  );
+  const userDateOfBirthInput = registrationForm.querySelector(
+    'input[name="userDateOfBirth"]',
+  );
+  const userLoginInput = registrationForm.querySelector(
+    'input[name="userLogin"]',
+  );
+  const userPasswordInput = registrationForm.querySelector(
+    'input[name="userPassword"]',
+  );
+  const userConfirmPasswordInput = registrationForm.querySelector(
+    'input[name="userConfirmPassword"]',
+  );
 
   const name = userNameInput.value;
   const surname = userSurnameInput.value;
@@ -54,21 +67,21 @@ registrationForm.addEventListener('submit', (event) => {
   const confirmPassword = userConfirmPasswordInput.value;
 
   if (password !== confirmPassword) {
-    alert('Passwords do not match!');
+    alert("Passwords do not match!");
     return;
   }
 
-const user = {
+  const user = {
     name,
     surname,
     dateOfBirth,
     login,
-    password,
-    registrationDate: new Date()
-};
+    password: "***",
+    registrationDate: new Date(),
+  };
 
-console.log('User registered:', user);
+  console.log("User registered:", user);
 
-registrationForm.reset();
+  registrationForm.reset();
   closeModal();
 });
