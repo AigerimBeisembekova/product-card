@@ -67,9 +67,48 @@
           <button id="toggle-color-btn" class="color-toggle-btn" type="button">
             Переключить цвет кнопки
           </button>
-
+          <button id="open-modal-btn" type="button">Регистрация</button>
 
           <ul id="products-list" class="products clear-list"></ul>
+
+          <footer class="footer">
+            <div class="footer__container container">
+
+              <div class="footer__social">
+                <h2 class="footer__social-title">Product Cards</h2>
+                <p class="footer__text">У нас самые лучшие продукты для кожи!</p>
+                <div class="footer__social-icons">
+                  <a href="#"><img 
+                    src="images/telegram-icon.png" alt="телеграм"></a>
+                  <a href="#"><img src="images/vk-icon.png" alt="вКонтакте"></a>
+                </div>
+              </div>
+
+              <div class="footer__subscribe">
+                <p class="footer__subscribe-title">Подпишись на наши акции:</p>
+                <form class="footer__subscribe-form">
+                <input type="email" id="email-input" placeholder="Введи email..." required />
+                <button type="submit">Подписаться</button>
+                </form>
+              </div>
+
+              <div class="footer__links">
+                <h3 class="footer__links-title">Быстрые ссылки</h3>
+                <nav class="footer__nav">
+                  <ul class="footer__nav-ul">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Магазин</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="footer__copyright">
+              <p class="footer__bottom">www.product-cards.com©all right reserve</p>
+            </div>
+          </footer>
+
+
 
           <template id="products-template">
             <li class="products__item card">
@@ -88,12 +127,34 @@
             </li>
           </template>
 
+          <div class="overlay" id="overlay"></div>
+          <div class="modal" id="modal">
+            <button class="modal__close-btn" type="button">&times;</button>
+            <form class="modal__form">
+              <label for="username">Имя:</label>
+              <input type="text" id="username" name="username" placeholder="Введите имя" required />
+              <label for="userSurname">Фамилия:</label>
+              <input type="text" id="userSurname" name="userSurname" placeholder="Введите фамилию" required />
+              <label for="userDateOfBirth">Дата рождения:</label>
+              <input type="date" id="userDateOfBirth" name="userDateOfBirth" placeholder="Выберите дату рождения" required />
+              <label for="userLogin">Email:</label>
+              <input type="email" id="userLogin" name="userLogin" placeholder="Введите логин" minlength="5" required />
+              <label for="userPassword">Пароль:</label>
+              <input type="password" id="userPassword" name="userPassword" placeholder="Введите пароль" minlength="5" required />
+              <label for="userConfirmPassword">Подтвердите пароль:</label>
+              <input type="password" id="userConfirmPassword" name="userConfirmPassword" placeholder="Подтвердите пароль" required />
+              <button type="submit">Зарегистрироваться</button>
+            </form>
+          </div>
+
+
 
         <script src="main.js"></script>
         <script src="homework-7.js"></script>
         <script src="homework-8.js"></script>
         <script type="module" src="homework-9.js"></script>
         <script type="module" src="homework-10.js"></script>
+        <script type="module" src="homework-11.js"></script>
       </div>
     </main>
   </body>

@@ -2,7 +2,7 @@ const firstCard = document.querySelector(".products__item");
 const changeFirstCardBtn = document.querySelector("#change-first-card-btn");
 
 changeFirstCardBtn.addEventListener("click", () => {
-  firstCard.style.backgroundColor = "#e8f5e9"; // Легкий зеленый
+  firstCard.style.backgroundColor = '#e8f5e9'; // Легкий зеленый
 });
 
 const allCards = document.querySelectorAll(".products__item");
