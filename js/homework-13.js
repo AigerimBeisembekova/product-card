@@ -101,3 +101,5 @@ favoriteCafe.orderDrink(latte);
 console.log(jasmineTea.getDrinkTemperature());
 coldLemonade.setTemperature(25);
 console.log(coldLemonade.getDrinkTemperature());
+
+// не отправляется пулл реквест
