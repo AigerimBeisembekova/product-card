@@ -108,8 +108,6 @@
             </div>
           </footer>
 
-
-
           <template id="products-template">
             <li class="products__item card">
               <img src="" alt="" class="product-image card__image" />
@@ -127,34 +125,71 @@
             </li>
           </template>
 
-          <div class="overlay" id="overlay"></div>
           <div class="modal" id="modal">
+          <div class="overlay" id="overlay"></div>
+          <div class="modal__body">
             <button class="modal__close-btn" type="button">&times;</button>
-            <form class="modal__form">
+            <form class="modal__form" id="modal__form">
+
               <label for="username">Имя:</label>
-              <input type="text" id="username" name="username" placeholder="Введите имя" required />
+              <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Введите имя"
+              required />
+
               <label for="userSurname">Фамилия:</label>
-              <input type="text" id="userSurname" name="userSurname" placeholder="Введите фамилию" required />
+              <input
+              type="text"
+              id="userSurname"
+              name="userSurname"
+              placeholder="Введите фамилию"
+              required />
+
               <label for="userDateOfBirth">Дата рождения:</label>
-              <input type="date" id="userDateOfBirth" name="userDateOfBirth" placeholder="Выберите дату рождения" required />
+              <input
+              type="date"
+              id="userDateOfBirth"
+              name="userDateOfBirth"
+              placeholder="Выберите дату рождения"
+              required />
+            
+
               <label for="userLogin">Email:</label>
-              <input type="email" id="userLogin" name="userLogin" placeholder="Введите логин" minlength="5" required />
+              <input
+              type="email"
+              id="userLogin"
+              name="userLogin"
+              placeholder="Введите логин"
+              minlength="5"
+              required />
+            
+
               <label for="userPassword">Пароль:</label>
-              <input type="password" id="userPassword" name="userPassword" placeholder="Введите пароль" minlength="5" required />
+              <input
+              type="password"
+              id="userPassword"
+              name="userPassword"
+              placeholder="Введите пароль"
+              minlength="5"
+              required />
+
               <label for="userConfirmPassword">Подтвердите пароль:</label>
-              <input type="password" id="userConfirmPassword" name="userConfirmPassword" placeholder="Подтвердите пароль" required />
+              <input
+              type="password"
+              id="userConfirmPassword"
+              name="userConfirmPassword"
+              placeholder="Подтвердите пароль"
+              required />
+
               <button type="submit">Зарегистрироваться</button>
             </form>
+            </div>
           </div>
 
 
-
-        <script src="main.js"></script>
-        <script src="homework-7.js"></script>
-        <script src="homework-8.js"></script>
-        <script type="module" src="homework-9.js"></script>
-        <script type="module" src="homework-10.js"></script>
-        <script type="module" src="homework-11.js"></script>
+        <script type="module" src="./js/main.js"></script>
       </div>
     </main>
   </body>
