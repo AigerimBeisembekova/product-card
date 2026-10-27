@@ -9,9 +9,9 @@ import "./homework-10.js";
 import "./homework-12.js";
 import "./homework-13.js";
 
-
 import { Modal } from "./modal.js";
 import { Form } from "./form.js";
+import { TwoModals } from "./homework-14.js";
 
 const regModal = new Modal("modal");
 const regForm = new Form("modal__form");
@@ -54,3 +54,6 @@ if (regForm.form) {
     }
   });
 }
+
+const regModal14 = new TwoModals("reg-modal-14", "open-reg14-modal-btn", true);
+const authModal14 = new TwoModals("auth-modal-14", "open-auth14-modal-btn", false);
