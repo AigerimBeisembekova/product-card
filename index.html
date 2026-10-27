@@ -73,22 +73,31 @@
 
           <footer class="footer">
             <div class="footer__container container">
-
               <div class="footer__social">
                 <h2 class="footer__social-title">Product Cards</h2>
-                <p class="footer__text">У нас самые лучшие продукты для кожи!</p>
+                <p class="footer__text">
+                  У нас самые лучшие продукты для кожи!
+                </p>
                 <div class="footer__social-icons">
-                  <a href="#"><img 
-                    src="images/telegram-icon.png" alt="телеграм"></a>
-                  <a href="#"><img src="images/vk-icon.png" alt="вКонтакте"></a>
+                  <a href="#"
+                    ><img src="images/telegram-icon.png" alt="телеграм"
+                  /></a>
+                  <a href="#"
+                    ><img src="images/vk-icon.png" alt="вКонтакте"
+                  /></a>
                 </div>
               </div>
 
               <div class="footer__subscribe">
                 <p class="footer__subscribe-title">Подпишись на наши акции:</p>
                 <form class="footer__subscribe-form">
-                <input type="email" id="email-input" placeholder="Введи email..." required />
-                <button type="submit">Подписаться</button>
+                  <input
+                    type="email"
+                    id="email-input"
+                    placeholder="Введи email..."
+                    required
+                  />
+                  <button type="submit">Подписаться</button>
                 </form>
               </div>
 
@@ -104,7 +113,9 @@
               </div>
             </div>
             <div class="footer__copyright">
-              <p class="footer__bottom">www.product-cards.com©all right reserve</p>
+              <p class="footer__bottom">
+                www.product-cards.com©all right reserve
+              </p>
             </div>
           </footer>
 
@@ -126,71 +137,97 @@
           </template>
 
           <div class="modal" id="modal">
-          <div class="overlay" id="overlay"></div>
-          <div class="modal__body">
-            <button class="modal__close-btn" type="button">&times;</button>
-            <form class="modal__form" id="modal__form">
+            <div class="overlay" id="overlay"></div>
+            <div class="modal__body">
+              <button class="modal__close-btn" type="button">&times;</button>
+              <form class="modal__form" id="modal__form">
+                <label for="username">Имя:</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Введите имя"
+                  required
+                />
 
-              <label for="username">Имя:</label>
-              <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Введите имя"
-              required />
+                <label for="userSurname">Фамилия:</label>
+                <input
+                  type="text"
+                  id="userSurname"
+                  name="userSurname"
+                  placeholder="Введите фамилию"
+                  required
+                />
 
-              <label for="userSurname">Фамилия:</label>
-              <input
-              type="text"
-              id="userSurname"
-              name="userSurname"
-              placeholder="Введите фамилию"
-              required />
+                <label for="userDateOfBirth">Дата рождения:</label>
+                <input
+                  type="date"
+                  id="userDateOfBirth"
+                  name="userDateOfBirth"
+                  placeholder="Выберите дату рождения"
+                  required
+                />
 
-              <label for="userDateOfBirth">Дата рождения:</label>
-              <input
-              type="date"
-              id="userDateOfBirth"
-              name="userDateOfBirth"
-              placeholder="Выберите дату рождения"
-              required />
-            
+                <label for="userLogin">Email:</label>
+                <input
+                  type="email"
+                  id="userLogin"
+                  name="userLogin"
+                  placeholder="Введите логин"
+                  minlength="5"
+                  required
+                />
 
-              <label for="userLogin">Email:</label>
-              <input
-              type="email"
-              id="userLogin"
-              name="userLogin"
-              placeholder="Введите логин"
-              minlength="5"
-              required />
-            
+                <label for="userPassword">Пароль:</label>
+                <input
+                  type="password"
+                  id="userPassword"
+                  name="userPassword"
+                  placeholder="Введите пароль"
+                  minlength="5"
+                  required
+                />
 
-              <label for="userPassword">Пароль:</label>
-              <input
-              type="password"
-              id="userPassword"
-              name="userPassword"
-              placeholder="Введите пароль"
-              minlength="5"
-              required />
+                <label for="userConfirmPassword">Подтвердите пароль:</label>
+                <input
+                  type="password"
+                  id="userConfirmPassword"
+                  name="userConfirmPassword"
+                  placeholder="Подтвердите пароль"
+                  required
+                />
 
-              <label for="userConfirmPassword">Подтвердите пароль:</label>
-              <input
-              type="password"
-              id="userConfirmPassword"
-              name="userConfirmPassword"
-              placeholder="Подтвердите пароль"
-              required />
-
-              <button type="submit">Зарегистрироваться</button>
-            </form>
+                <button type="submit">Зарегистрироваться</button>
+              </form>
             </div>
           </div>
 
+          <button class="button-14" id="open-reg14-modal-btn" type="button">Регистрация</button>
+          <button class="button-14" id="open-auth14-modal-btn" type="button">Аутентификация</button>
 
-        <script type="module" src="./js/main.js"></script>
+          <div class="overlay-14" id="overlay-14"></div>
+
+          <div class="modal-14" id="reg-modal-14">
+            <h1>Регистрация</h1>
+            <span>Пароль</span>
+            <span>Повторите пароль</span>
+            <span>Логин</span>
+            <span>Почта</span>
+
+            <button class="modal-14-close-button" id="close-reg14-modal-btn" type="button">&times;</button>
+          </div>
+
+          <div class="modal-14" id="auth-modal-14">
+            <h1>Аутентификация</h1>
+            <p>Логин</p>
+            <p>Пароль</p>
+
+            <button class="modal-14-close-button" id="close-auth14-modal-btn" type="button">&times;</button>
+          </div>
+          
+        </div>
       </div>
     </main>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
