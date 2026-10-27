@@ -3,11 +3,29 @@ export class TwoModals {
     this.modal = document.getElementById(modalId);
     this.overlay = document.getElementById("overlay-14");
     this.shouldCloseOnOverlay = shouldCloseOnOverlay;
+    this.openButton = document.getElementById(buttonId);
+
+    if (!this.modal) {
+      throw new Error("Модалка не найдена!");
+    }
+    if (!this.overlay) {
+      throw new Error("Оверлэй не найден!");
+    }
+    if (!this.openButton) {
+      throw new Error("Кнопка открытия не найдена!");
+    }
+
+    this.closeButton = this.modal.querySelector(".modal-14-close-button");
+
+    if (!this.closeButton) {
+      throw new Error("Кнопка закрытия не найдена!");
+    }
+
     this.overlayClickHandler = () => {
       this.close();
     };
-    this.#initOpen(buttonId);
-    this.#initClose();
+    this.#addOpenListener();
+    this.#addCloseListener();
   }
 
   open() {
@@ -28,17 +46,14 @@ export class TwoModals {
     return this.modal.classList.contains("modal-showed-14");
   }
 
-  #initOpen(buttonId) {
-    const button = document.getElementById(buttonId);
-    button.addEventListener("click", () => {
+  #addOpenListener() {
+    this.openButton.addEventListener("click", () => {
       this.open();
     });
   }
 
-  #initClose() {
-    const closeButton = this.modal.querySelector(".modal-14-close-button");
-
-    closeButton.addEventListener("click", () => {
+  #addCloseListener() {
+    this.closeButton.addEventListener("click", () => {
       this.close();
     });
   }
