@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="async.css" />
+  </head>
+  <body>
+    <p class="loading-message">Данные загружаются</p>
+    <button class="delete-all-btn" id="delete-all-btn" type="button">
+      Удалить все карточки
+    </button>
+    <button class="get-users-btn" id="get-users-btn" type="button">
+      Получить всех пользователей
+    </button>
+    <button class="delete-user-btn" id="delete-user-btn" type="button">
+      Удалить пользователя
+    </button>
+
+    <template id="user-card-template">
+      <div class="user-card">
+        <h2 class="user-id"></h2>
+        <p class="user-name"></p>
+        <p class="user-surname"></p>
+        <p class="user-email"></p>
+        <p class="user-age"></p>
+      </div>
+    </template>
+    <div class="user-card-container" id="user-card-container"></div>
+    <script type="module" src="async.js"></script>
+  </body>
+</html>
