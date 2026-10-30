@@ -17,7 +17,7 @@ getUsersBtn.addEventListener("click", () => {
   loadingMessage.classList.remove("loading-message-hide");
   setTimeout(() => {
     fetch("users.json")
-    // fetch("users-error.json") // проверка ошибки
+      // fetch("users-error.json") // проверка ошибки
       .then((response) => {
         if (!response.ok) {
           throw new Error("Не удалось загрузить данные");
@@ -26,11 +26,9 @@ getUsersBtn.addEventListener("click", () => {
       })
       .then((data) => {
         users = data.users;
-        userCardContainer.innerHTML = "";
+        renderUsers();
         localStorage.setItem("users", JSON.stringify(users));
-        users.forEach((user) => {
-          createUserCard(user);
-        });
+
         loadingMessage.classList.add("loading-message-hide");
       })
       .catch((error) => {
@@ -50,6 +48,14 @@ function createUserCard(user) {
   cardClone.querySelector(".user-age").textContent = user.age;
 
   userCardContainer.appendChild(cardClone);
+}
+
+function renderUsers() {
+  userCardContainer.innerHTML = "";
+
+  users.forEach((user) => {
+    createUserCard(user);
+  });
 }
 
 deleteAllBtn.addEventListener("click", () => {
@@ -75,19 +81,14 @@ deleteUserBtn.addEventListener("click", () => {
     return;
   }
   users = filteredUsers;
-  userCardContainer.innerHTML = "";
-
-  users.forEach((user) => {
-    createUserCard(user);
-  });
+  renderUsers();
   localStorage.setItem("users", JSON.stringify(users));
 });
 
 if (users) {
-  users.forEach((user) => {
-    loadingMessage.classList.add("loading-message-hide");
-    createUserCard(user);
-  });
+  loadingMessage.classList.add("loading-message-hide");
+
+  renderUsers();
 } else {
   getUsersBtn.click();
 }
