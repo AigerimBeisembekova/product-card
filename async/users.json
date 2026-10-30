@@ -1,0 +1,30 @@
+{ "users" :
+[{ 
+  "id" : 10000,
+  "name" : "Aigerim",
+  "surname" : "Beisembekova",
+  "email" : "aika@example.com",
+  "age" : 34
+},
+{
+  "id" : 10001,
+  "name" : "Mihrimah",
+  "surname" : "Murat",
+  "email" : "monti@example.com",
+  "age" : 5
+},
+{
+  "id" : 10002,
+  "name" : "Aiya",
+  "surname" : "Kumargali",
+  "email" : "adi@example.com",
+  "age" : 18
+},
+{
+  "id" : 10003,
+  "name" : "Alpamys",
+  "surname" : "Bissengaliyev",
+  "email" : "alpa@example.com",
+  "age" : 31
+}
+]}
